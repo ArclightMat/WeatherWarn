@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">WeatherWarn</string>
+    <string name="location">City</string>
+    <string name="temp">0°C</string>
+    <string name="desc">Description</string>
+    <string name="wind">Wind</string>
+    <string name="humd">Humidity</string>
+    <string name="pressure">Pressure</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
 </resources>
