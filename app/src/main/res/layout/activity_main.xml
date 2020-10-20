@@ -23,9 +23,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/location"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="City" />
 
     <TextView
         android:id="@+id/todayTemp"
@@ -33,18 +33,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/temp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        tools:text="Temp" />
 
     <TextView
         android:id="@+id/todayDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:text="@string/desc"
         app:layout_constraintBaseline_toBaselineOf="@+id/todayTemp"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Description" />
 
     <TextView
         android:id="@+id/todaySunrise"
@@ -52,18 +52,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/sunrise"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/todayTemp" />
+        app:layout_constraintTop_toBottomOf="@+id/todayTemp"
+        tools:text="Sunrise" />
 
     <TextView
         android:id="@+id/todaySunset"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:text="@string/sunset"
         app:layout_constraintBaseline_toBaselineOf="@+id/todaySunrise"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Sunset" />
 
     <TextView
         android:id="@+id/todayWind"
@@ -71,27 +71,27 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/wind"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/todaySunrise" />
+        app:layout_constraintTop_toBottomOf="@+id/todaySunrise"
+        tools:text="Wind" />
 
     <TextView
         android:id="@+id/todayHumidity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:text="@string/humd"
         app:layout_constraintBaseline_toBaselineOf="@+id/todayWind"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Humidity" />
 
     <TextView
         android:id="@+id/todayPressure"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:text="@string/pressure"
         app:layout_constraintBaseline_toBaselineOf="@+id/todayFeelsLike"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Pressure" />
 
     <TextView
         android:id="@+id/todayTempMin"
@@ -99,18 +99,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/temp_min"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/todayWind" />
+        app:layout_constraintTop_toBottomOf="@+id/todayWind"
+        tools:text="Temp Min." />
 
     <TextView
         android:id="@+id/todayTempMax"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:text="@string/temp_max"
         app:layout_constraintBaseline_toBaselineOf="@+id/todayTempMin"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Temp Max." />
 
     <TextView
         android:id="@+id/todayFeelsLike"
@@ -118,17 +118,17 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/feels_like"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/todayTempMin" />
+        app:layout_constraintTop_toBottomOf="@+id/todayTempMin"
+        tools:text="Feels Like" />
 
     <TextView
         android:id="@+id/lastUpdated"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:text="@string/last_updated"
         app:layout_constraintBaseline_toBaselineOf="@+id/name"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Last Updated" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
