@@ -25,7 +25,7 @@ import java.util.*
 
 const val apiUrl: String = "https://api.openweathermap.org"
 const val unit: String = "metric"
-const val apiKey: String = "" // Insert OpenWeatherMap API Key here
+const val apiKey: String = "d812964462fe23a175e9854e19876a78" // Insert OpenWeatherMap API Key here
 const val lang: String = "pt_BR"
 const val LOCATION_CODE = 42
 private lateinit var locationCallback: LocationCallback
@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        weatherProgress.visibility = View.VISIBLE
         locationRequest = LocationRequest.create().apply {
             interval = 3000
             fastestInterval = 1000
@@ -45,7 +44,6 @@ class MainActivity : AppCompatActivity() {
         locationCallback = object : LocationCallback() {
             override fun onLocationResult(result: LocationResult?) {
                 result ?: return
-                weatherProgress.visibility = View.VISIBLE
                 loadWeatherData(result.lastLocation.latitude.toString(), result.lastLocation.longitude.toString())
                 fusedLocationClient.removeLocationUpdates(locationCallback)
             }
@@ -94,13 +92,11 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onResponse(call: Call<WeatherData>, response: Response<WeatherData>) {
-                weatherProgress.visibility = View.INVISIBLE
-                name.text = getString(R.string.location, response.body()?.name)
+                locationName.text = response.body()?.name
                 lastUpdated.text = getString(R.string.last_updated, SimpleDateFormat("HH:mm", Locale.ENGLISH).format(Date(
                     (response.body()?.dt?.toLong() ?: 0) *1000)))
                 response.body()?.weatherData?.forEach {
-                    todayDescription.text = getString(R.string.desc, it.description)
-                    // TODO: Main/Icon
+                    todayDescription.text = it.description
                 }
                 // Main
                 todayTemp.text = getString(R.string.temp, response.body()?.main?.temp)
@@ -110,11 +106,10 @@ class MainActivity : AppCompatActivity() {
                 todayTempMin.text = getString(R.string.temp_min,response.body()?.main?.tempMin)
                 todayTempMax.text = getString(R.string.temp_max,response.body()?.main?.tempMax)
                 // Sys
-                todaySunrise.text = getString(R.string.sunrise, SimpleDateFormat("HH:mm", Locale.ENGLISH).format(Date(
-                    (response.body()?.sys?.sunrise?.toLong() ?: 0) *1000)))
-                todaySunset.text =
-                    getString(R.string.sunset, SimpleDateFormat("HH:mm", Locale.ENGLISH).format(Date(
-                        (response.body()?.sys?.sunset?.toLong() ?: 0) *1000)))
+                todaySunrise.text = SimpleDateFormat("HH:mm", Locale.ENGLISH).format(Date(
+                    (response.body()?.sys?.sunrise?.toLong() ?: 0) *1000))
+                todaySunset.text = SimpleDateFormat("HH:mm", Locale.ENGLISH).format(Date(
+                    (response.body()?.sys?.sunset?.toLong() ?: 0) *1000))
                 // Wind
                 todayWind.text = getString(R.string.wind, response.body()?.wind?.speed)
             }

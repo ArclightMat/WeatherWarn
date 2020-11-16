@@ -1,17 +1,25 @@
 <resources>
     <string name="app_name">WeatherWarn</string>
-    <string name="location">Local: %1$s</string>
-    <string name="temp">Temperatura: %1$.2f °C</string>
-    <string name="desc">Clima: %1$s</string>
-    <string name="wind">Vento: %1$.2f m/s</string>
-    <string name="humd">Humididade: %1$d %%</string>
-    <string name="pressure">Pressão: %1$d hPa</string>
-    <string name="sunrise">Nascer do Sol: %1$s</string>
-    <string name="sunset">Pôr do Sol: %1$s</string>
-    <string name="feels_like">Sensação: %1$.2f °C</string>
-    <string name="temp_min">Temp Min: %1$.2f °C</string>
-    <string name="temp_max">Temp Max: %1$.2f °C</string>
     <string name="last_updated">Atualizado às: %1$s</string>
+    <string name="temp_min">Temp Min: %1$.0f °C</string>
+    <string name="temp_max">Temp Max: %1$.0f °C</string>
+    <string name="temp">%1$.0f°C</string>
+    <string name="feels_like_icon">Icone de Descrição</string>
+    <string name="feels_like_title">Sensação</string>
+    <string name="feels_like">%1$.0f°C</string>
+    <string name="wind_icon">Icone de Vento</string>
+    <string name="wind_title">Vento</string>
+    <string name="wind">%1$.2f m/s</string>
+    <string name="humd_icon">Icone de Humidade</string>
+    <string name="humd_title">Humidade</string>
+    <string name="humd">%1$d %%</string>
+    <string name="pressure_icon">Icone de Pressão Atmosferica</string>
+    <string name="pressure_title">Pressão</string>
+    <string name="pressure">%1$d hPa</string>
+    <string name="sunrise_icon">Icone de Nascer do Sol</string>
+    <string name="sunrise_title">Nascer do Sol</string>
+    <string name="sunset_icon">Icone de Pôr do Sol</string>
+    <string name="sunset_title">Pôr do Sol</string>
     <string name="permission_location">Precisamos da sua localização para identificar corretamente sua posição e exibir a previsão.</string>
     <string name="menu_refresh">Recarregar</string>
 </resources>
